@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category-form.component.css']
 })
 export class CategoryFormComponent implements OnInit {
+  title = 'Nova Categoria';
 
   constructor() { }
 

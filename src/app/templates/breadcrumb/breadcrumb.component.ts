@@ -7,11 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BreadcrumbComponent implements OnInit {
 
-  breadcrumb: string = "Home";
+  breadcrumb?: string = "Home";
 
-  @Input() breadcrumbActive: string | undefined;
+  @Input() active?: boolean;
+
+  @Input() breadcrumbActive?: string | undefined;
+
+  @Input() subbreadcrumbActive?: string | undefined;
 
   constructor() { }
+
+  ativar = {
+    active: true
+  }
 
   ngOnInit(): void {
   }

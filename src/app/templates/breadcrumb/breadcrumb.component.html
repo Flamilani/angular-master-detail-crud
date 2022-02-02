@@ -3,8 +3,12 @@
     <li class="breadcrumb-item">
       <a routerLink="/">{{ breadcrumb }}</a>
     </li>
+    <li class="breadcrumb-item active" [ngClass]="'active'" *ngIf="active">
+      <a *ngIf="active" routerLink="/categories">{{ breadcrumbActive }}</a>
+      <a *ngIf="!active">{{ breadcrumbActive }}</a>
+    </li>
     <li class="breadcrumb-item active">
-      {{ breadcrumbActive }}
+      {{ subbreadcrumbActive }}
     </li>
   </ol>
 </nav>

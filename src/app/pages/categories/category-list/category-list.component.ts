@@ -9,6 +9,7 @@ import { CategoryService } from '../services/category.service';
 })
 export class CategoryListComponent implements OnInit {
   title = 'Categorias';
+  active = true;
 
   categories: Category[] = [];
 

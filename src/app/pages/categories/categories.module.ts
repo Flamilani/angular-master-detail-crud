@@ -1,4 +1,4 @@
-import { BreadcrumbComponent } from './../../templates/breadcrumb/breadcrumb.component';
+import { ShareModule } from './../../share/share.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,17 +11,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     CategoryListComponent,
-    CategoryFormComponent,
-    BreadcrumbComponent
+    CategoryFormComponent
   ],
   imports: [
     CommonModule,
     CategoriesRoutingModule,
     FormsModule,
     ReactiveFormsModule
-  ],
-  exports: [
-    BreadcrumbComponent
   ]
 })
 export class CategoriesModule { }

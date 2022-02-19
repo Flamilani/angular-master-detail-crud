@@ -1,5 +1,5 @@
 import { Category } from './../models/category.model';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { CategoryService } from '../services/category.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { CategoryService } from '../services/category.service';
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent implements OnInit {
-  title = 'Categorias';
+  @Input() title = 'Categorias';
   active = true;
 
   categories: Category[] = [];

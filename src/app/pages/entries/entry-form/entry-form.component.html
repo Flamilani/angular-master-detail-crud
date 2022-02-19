@@ -6,27 +6,27 @@
     </h1>
   </div>
   <div class="col-md-2">
-    <a routerLink="/categories" class="btn btn-success float-end">
+    <a routerLink="/entries" class="btn btn-success float-end">
     Voltar
     </a>
   </div>
 </div>
 
-<form [formGroup]="categoryForm" (submit)="submitForm()" autocomplete="off">
+<form [formGroup]="entryForm" (submit)="submitForm()" autocomplete="off">
   <div class="card">
     <div class="card-header">
-      Informações sobre a categoria
+      Informações sobre o Lançamento
     </div>
     <div class="card-body">
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="name">Nome</label>
           <input type="text" class="form-control" id="name" formControlName="name">
-          <div class="text-danger" *ngIf="categoryForm.get('name')?.invalid && categoryForm.get('name')?.touched">
-            <div *ngIf="categoryForm.get('name')?.errors?.required">
+          <div class="text-danger" *ngIf="entryForm.get('name')?.invalid && entryForm.get('name')?.touched">
+            <div *ngIf="entryForm.get('name')?.errors?.required">
               Dado obrigatório
             </div>
-            <div *ngIf="categoryForm.get('name')?.errors?.minlength">
+            <div *ngIf="entryForm.get('name')?.errors?.minlength">
               Deve ter no mínimo 2 caracteres
             </div>
           </div>
@@ -47,5 +47,5 @@
   </div>
 
 
-  <button [disabled]="submittingForm || categoryForm.invalid" type="submit" class="btn btn-primary mt-3">Salvar</button>
+  <button [disabled]="submittingForm || entryForm.invalid" type="submit" class="btn btn-primary mt-3">Salvar</button>
 </form>
